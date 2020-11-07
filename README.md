@@ -1,2 +1,2 @@
-# Clubs-Organizations
+# Clubs & Organizations
 This is front-end project.
