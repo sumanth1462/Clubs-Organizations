@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body{
+			background-image:linear-gradient(to right,pink,blue); 
+		}
+		#myForm{
+			position: absolute;
+			top:100px;
+			left:400px;
+			font-size: 30px;
+		}
+		#b1{
+			border-radius: 50px;
+			padding: 10px;
+			text-align: center;
+			border: none;
+			font-size: 20px;
+			background-color: skyblue;
+			outline: none;
+			cursor:pointer;
+		}
+
+	</style>
+	<script>
+		function valid(){
+			var stu=document.getElementById("uId").value;
+			var soname=document.getElementById("org").value;
+			if(stu==""||soname=="")
+			{
+				alert("Enter All Details");
+				return false;
+			}
+			if(stu.length!=8||isNaN(stu))
+			{
+				alert("Student Id must be a 8 digit registration number");
+				return false;
+
+			}
+			else if(soname=="select")
+			{
+				alert("select the name of the organization");
+				return false;
+			}
+			else{
+				alert("Details Successfully Updated");
+				return true;
+			}
+		}
+		function change(){
+			document.getElementById("b1").style.background="lightgreen";
+		}
+		function cha(){
+			document.getElementById("b1").style.background="skyblue";
+		}
+	</script>
+</head>
+<body>
+<form id="myForm" onsubmit="return valid()" method="post">
+	<label>Student Id</label><br/>
+	<input type="text" id="uId" name="" style="font-size:20px;"><br/><br/>
+	<label>Organization Name</label><br/>
+	<select id="org" style="width:250px; font-size:20px; ">
+		<option value="select">Select</option>
+		<option value="SquadRon Organization">SquadRon Organization</option>
+		<option value="Pahal Organization">Pahal Organization</option>
+		<option value="Otaku Organization">Otaku Organization</option>
+	</select><br/><br/>
+	<button id="b1" type="submit" onmouseover="change()" onmouseout="cha()"><b>Update</b></button>
+</form>
+</body>
+</html>

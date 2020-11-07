@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#area #ar{
+			box-shadow: 0 0 20px;
+			margin: 30px;
+		}
+		#ar{
+			outline: none;
+			font-size: 20px;
+			padding: 10px;
+		}
+		#sub{
+			border-radius: 50px; 
+			font-size: 25px;
+			padding: 5px;
+			outline: none;
+			border: none;
+		}
+		#sub:hover{
+			background-color: orange;
+		}
+		#store{
+			font-size: 30px;
+			margin: 20px;
+		}
+		#category{
+			font-size: 20px;
+		}
+	</style>
+	<script>
+		function valid()
+		{
+			var mess=document.getElementById("ar").value;
+			var cat=document.getElementById("category").value;
+			if(mess==""||mess.length<10)
+			{
+				alert("Enter the message you want to send");
+				return false;
+			}
+			else if(cat==""||cat=="select")
+			{
+				alert("select the to address");
+				return false;
+			}
+			else
+			{
+				alert("The message has been successfully sent");
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+<center><form onsubmit="return valid()" action="" >
+	<div id="area"><textarea id="ar" rows="7" cols="70"></textarea></div>
+	<div id="store"><label>To:</label>
+	<select id="category">
+		<option value="select">select</option>
+		<option value="All the Users">All the Users</option>
+		<option value="CEO's of organizations">CEO's of organizations</option>
+		<option value="members of SquadRon Organization">members of SquadRon Organization</option>
+		<option value="members of Otaku Organization">members of Otaku Organization</option>
+	</select></div>
+	<button id="sub"  type="submit">Send</button>
+</form></center>
+</body>
+</html>

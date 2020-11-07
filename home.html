@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+
+		ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: whitesmoke;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 166px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: blue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {background-color: whitesmoke;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.container{
+			background-color: lightgreen;
+			height: 260px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+
+		}
+		.close
+		{
+			position: absolute;
+		left:1324px;
+		font-size: 30px;
+		color: black;
+		cursor: pointer;
+
+		}
+
+
+.maindiv{
+	display: flex;
+	flex-wrap: wrap;
+}
+.col{
+	color:rgba(0,0,0,0.8);
+}
+.org{
+	margin-top: 10px;
+	width:300px;
+	height:300px;
+	border-radius: 20px;
+	border: 1px solid white;
+	margin :12px;
+	margin-bottom: 20px;
+	box-shadow: 8px 5px 15px;
+}
+.org:hover{
+	border:5px solid white;
+
+}
+.imag{
+	height: 150px;
+	width: 300px;
+	border-radius: 20px;
+
+}
+#hold img{
+	height:230px;
+	width:800px;
+}
+.maindiv a{
+	text-decoration: none;
+	color: black;
+}
+hr{
+	color: rgba(255,255,255,0.7);
+}
+.sty{
+	color: orange;
+}
+.footer {
+  padding: 5px;
+  margin-bottom: 0px;
+  text-align: center;
+  background-color: rgb(0,0,0,0.5);
+
+  bottom: 0px;
+}
+.arrow {
+  border: solid green;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+#fanc{
+	text-decoration: none;
+	font-size:20px;
+}
+#fanc:hover{
+	color:green;
+}
+th{
+	color: white;
+}
+#add{
+	color: blue;
+}
+
+	</style>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<script>
+		function chang(){
+			document.getElementById("cl1").style.background="red";
+		}
+		function chan(){
+			document.getElementById("cl1").style.background="none";
+		}
+
+	</script>
+	
+</head>
+
+<body>
+<ul>
+  <li><a href="#home"><i id="add" class="fa fa-home">&nbsp;Home</i></a></li>
+  <li><a href="message.html"><i id="add" class="fas fa-envelope">&nbsp;My Messages</i></a></li>
+  <li><a href="org.html"><i id="add" class='fas fa-users'>&nbsp;My Organization</i></a></li>
+  <li class="dropdown">
+    <a href="" class="dropbtn" style="color: blue;"><b>Events</b> <i class="arrow down"></i></a>
+    <div class="dropdown-content">
+      <a href="cult.html">Cultural Events</a>
+      <a href="tech.html">Technical Events</a>
+      <a href="sport.html">Sports Events</a>
+      <a href="social.html">Social Events</a>
+    </div>
+  </li>
+  <li><a href="fun.html"><i id="add" class='fas fa-gamepad'>&nbsp;Fun Zone</i></a></li>
+  <li><a href="build.html"><i id="add" class='fas fa-award'>&nbsp;Build Your's</i></a></li>
+  <li style="float:right;"><a href="index.html" ><i id="add" class='fas fa-sign-out-alt'>&nbsp;Logout</i></a></li>
+</ul>
+<div class="container">
+	<span class="close" id="cl1" onclick="this.parentElement.style.display='none'" onclick="pos()" onmouseover="chang()" onmouseout="chan()">&times;</span>
+	<div class="cha">
+		<center><div id="hold"><img src="diya.PNG"></div>
+		<a href="https://www.instagram.com/p/CHH71-4nTOv/"><button type="button">Click Here</button></a></center></div>
+</div>
+<div class="maindiv">
+	<a href="squad.html"><div class="org">
+		<div><img class="imag" src="squad.jpeg" alt="SquadRon"></div>
+		<h3>Squadron Organization</h3>
+		<center><p class="col"><q>A great leader doesn't need Many followers but he creates many leader's </q></p></center>
+		<hr>
+		<center><p>Click here to&nbsp;<span class="sty">View</span></p></center>
+	</div></a>
+	<a href=""><div class="org">
+		<div><img class="imag" src="phoenix.jpeg" alt="Phoenix"></div>
+		<h3>Phoenix Organization</h3>
+		<center><p class="col"><q>A great leader doesn't need Many followers but he creates many leader's </q></p></center>
+		<hr>
+		<center><p>Click here to&nbsp;<span class="sty">View</span></p></center>
+	</div></a>
+	<a href=""><div class="org">
+		<div><img class="imag" src="Picture2.jpg" alt="Eminent"></div>
+		<h3>Eminent Organization</h3>
+		<center><p class="col"><q>A great leader doesn't need Many followers but he creates many leader's </q></p></center>
+		<hr>
+		<center><p >Click here to&nbsp;<span class="sty">View</span></p></center>
+	</div></a>
+	<a href=""><div class="org">
+		<div><img class="imag" src="pahal1.jpg" alt="Pahal"></div>
+		<h3>Pahal Organization</h3>
+		<center><p class="col"><q>A great leader doesn't need Many followers but he creates many leader's </q></p></center>
+		<hr>
+		<center><p>Click here to&nbsp;<span class="sty">View</span></p></center>
+	</div></a>
+	<a href="https://infodragcon.web.app/"><div class="org">
+		<div><img class="imag" src="drag.PNG" alt="Dragcon"></div>
+		<h3>Dragcon Organization</h3>
+		<center><p class="col"><q>A great leader doesn't need Many followers but he creates many leader's </q></p></center>
+		<hr>
+		<center><p>Click here to&nbsp;<span class="sty">View</span></p></center>
+	</div></a>
+	<a href="Otaku.html"><div class="org">
+		<div><img class="imag" src="otaku.png" alt="Otaku"></div>
+		<h3>Otaku Organization</h3>
+		<center><p class="col"><q>A great leader doesn't need Many followers but he creates many leader's </q></p></center>
+		<hr>
+		<center><p>Click here to&nbsp;<span class="sty">View</span></p></center>
+	</div></a>
+	<a href=""><div class="org">
+		<div><img class="imag" src="squad.jpeg" alt="SquadRon"></div>
+		<h3>Squadron Organization</h3>
+		<center><p class="col"><q>A great leader doesn't need Many followers but he creates many leader's </q></p></center>
+		<hr>
+		<center><p>Click here to&nbsp;<span class="sty">View</span></p></center>
+	</div></a>
+	<a href=""><div class="org">
+		<div><img class="imag" src="pahal1.jpg" alt="Pahal"></div>
+		<h3>Pahal Organization</h3>
+		<center><p class="col"><q>A great leader doesn't need Many followers but he creates many leader's </q></p></center>
+		<hr>
+		<center><p>Click here to&nbsp;<span class="sty">View</span></p></center>
+	</div></a>
+	<a href=""><div class="org">
+		<div><img class="imag" src="Picture2.jpg" alt="Eminent"></div>
+		<h3>Eminent Organization</h3>
+		<center><p class="col"><q>A great leader doesn't need Many followers but he creates many leader's </q></p></center>
+		<hr>
+		<center><p>Click here to&nbsp;<span class="sty">View</span></p></center>
+	</div></a>
+</div>
+<div class="footer">
+	 <center><table>
+  	<tr>
+  		<th colspan="2"><h2>Address</h2></th>
+  		<th>&nbsp;</th>
+  		<th>&nbsp;</th>
+  		<th>&nbsp;</th>
+  		<th colspan="2"><h2>Contact Us</h2></th>
+  		<th>&nbsp;</th>
+  		<th>&nbsp;</th>
+  		<th>&nbsp;</th>
+  		<th colspan="2"><h2>Follow Us</h2></th>
+  	</tr>
+  	<tr>
+  		<td colspan="2"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35384.33762787092!2d75.6965046743241!3d31.258613176964996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb80974d102f2870!2sBlock%2013%20Division%20Of%20Student%20Affairs!5e0!3m2!1sen!2sin!4v1604148030557!5m2!1sen!2sin" width="200" height="100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></td>
+  		<td>&nbsp;</td>
+  		<td>&nbsp;</td>
+  		<td>&nbsp;</td>
+  		<td colspan="2"><p><a id="fanc" href="mailto:headdsa.office@lpu.co.in">headdsa.office@lpu.co.in</a></p></td>
+  		<td>&nbsp;</td>
+  		<td>&nbsp;</td>
+  		<td>&nbsp;</td>
+  		<td colspan="2"><span><a href="https://www.facebook.com/dsw.lpu"><img src="https://uploads-ssl.webflow.com/5e6188da5cfda193494c3865/5e856be3776a8138a8050644_008-facebook.svg" alt="Facebook" style="height:30px; width:30px;border-radius:100%;"></a></span>&nbsp;<span><a href="https://dswlpu.wordpress.com/?share=twitter&nb=1"><img src="https://uploads-ssl.webflow.com/5e6188da5cfda193494c3865/5e856c0ffa63bc08568186dd_002-twitter.svg" alt="Twitter" style="height:30px; width:30px;border-radius:100%;"></a></span>&nbsp;<span><a href="https://www.linkedin.com/in/sai-bharath-72a42b17b/"><img src="https://uploads-ssl.webflow.com/5e6188da5cfda193494c3865/5e856b34f0055beb8baaadb5_010-linkedin.svg" alt="Linkdin" style="height:30px; width:30px;border-radius:100%;"></a></span>&nbsp;<span><a href="https://www.instagram.com/divisionofstudentwelfare/"><img src="https://uploads-ssl.webflow.com/5e6188da5cfda193494c3865/5e856c2228ae075a0240cbbd_011-instagram.svg" alt="Instagram" style="height:30px; width:30px;border-radius:100%;"></a></span></td></tr>
+  </table></center>
+</div>
+</body>
+</html>

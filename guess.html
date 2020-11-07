@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>guess</title>
+	<style>
+		.hold #store{
+			height:500px;
+			filter:blur(15px);
+		}
+	</style>
+	<script>
+		function generate(){
+			var a=document.getElementById("ans").value;
+			var b=parseInt(a);
+
+			if(b==15)
+			{
+
+				document.getElementById("ans").style.background="lightgreen";
+				document.getElementById("show").innerHTML="Congratulations";
+				document.getElementById("show").style.color="green";
+			}
+
+			else if(a==""||isNaN(a))
+			{
+				alert("enter block no.");
+			}
+			else
+			{
+				document.getElementById("ans").style.background="red";
+				document.getElementById("show").innerHTML="You missed it. It is block 15(Unimall) ";
+				document.getElementById("show").style.color="red";
+
+			}
+		}
+	</script>
+</head>
+<body>
+<div>
+	<center>
+		<div class="hold"><img id="store" src="uni.jpeg"></div>
+		<p>Guess the block</p>
+		<p id="show"></p>
+		<input id="ans" type="text" name="" autocomplete="off"><button onclick="generate()">submit</button>
+	</center>
+</div>
+</body>
+</html>

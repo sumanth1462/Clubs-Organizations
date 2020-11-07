@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		/*body{
+			background-image: linear-gradient(to left,mistyrose,skyblue);
+		}*/
+		* {
+  			box-sizing: border-box;
+			}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: whitesmoke;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 166px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: blue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {background-color: whitesmoke;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#add{
+	color: blue;
+}
+.arrow {
+  border: solid green;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+
+
+		.container{
+			background-image: linear-gradient(to left,blue,orange);
+			height: 200px;
+			margin-bottom: 10px;
+			border-radius: 15px; 
+		}
+		
+		.cha{
+			position: relative;
+			top:30px;
+		}
+		.gal{
+			height: 400px;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+		.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 85%;
+  width: auto;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  left:1290px;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,1.5);
+}
+.footer {
+  padding: 5px;
+  margin-bottom: 0px;
+  text-align: center;
+  background-color: rgb(0,0,0,0.5);
+  bottom: 0px;
+}
+.holder{
+	display: flex;
+	flex-wrap: wrap;
+}
+.container1{
+	width:400px;
+	background-image: linear-gradient(to right,pink,blue);
+	padding-top: 10px;
+	border: none;
+	margin: 20px;
+	color:white;
+	border-radius: 15px; 
+}
+
+#ceo{
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+}
+.gal>.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+
+  top: 0;
+}
+.numbertext{
+	text-align: center;
+}
+.text{
+	text-align: center;
+}
+.heady{
+	background-image: linear-gradient(red,black);
+	 -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+}
+.head{
+	text-align: center;
+	font-size: 20px;
+	padding: 5px;
+	background-image:  linear-gradient(to bottom right, red, yellow);
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+#fanc{
+	text-decoration: none;
+	font-size: 20px;
+}
+th{
+	color: white;
+}
+#but
+{
+	transform: rotate(-10deg);
+	font-size: 20px;
+	border-radius: 30px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+#but:hover
+{
+	background: green;
+}
+.cont{
+	color: black;
+}
+
+
+@keyframes example {
+  from {background-color: pink;}
+  to {background-color: green;}
+}
+
+	</style>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+	<ul>
+  <li><a href="home.html"><i id="add" class="fa fa-home">&nbsp;Home</i></a></li>
+  <li><a href="message.html"><i id="add" class="fas fa-envelope">&nbsp;My Messages</i></a></li>
+  <li><a href="org.html"><i id="add" class='fas fa-users'>&nbsp;My Organization</i></a></li>
+  <li class="dropdown">
+    <a href="" class="dropbtn" style="color: blue;"><b>Events</b> <i class="arrow down"></i></a>
+    <div class="dropdown-content">
+      <a href="cult.html">Cultural Events</a>
+      <a href="tech.html">Technical Events</a>
+      <a href="sport.html">Sports Events</a>
+      <a href="social.html">Social Events</a>
+    </div>
+  </li>
+  <li><a href="fun.html"><i id="add" class='fas fa-gamepad'>&nbsp;Fun Zone</i></a></li>
+  <li><a href="build.html"><i id="add" class='fas fa-award'>&nbsp;Build Your's</i></a></li>
+  <li style="float:right;"><a href="index.html" ><i id="add" class='fas fa-sign-out-alt'>&nbsp;Logout</i></a></li>
+</ul>
+<center><h1 class="heady">OTAKU Organization</h1></center>
+<center><p style="font-size: 20px;">Otaku organisation is an organization entity comprising great minds covering different areas of interest. We share equal Specialization and division of work. and more Oriented towards our goal of making it a success in technical as well as non -technical field.</p></center>
+<div class="container">
+	<div class="cha">
+		<center><h2><b>Live your Dream with Otaku Organization</b></h2>
+		<a href="abc.html"><button id="but" type="button">Register</button></a></center></div>
+</div>
+<div class="gal">
+	<div class="head">Upcoming Events</div>
+	<div class="mySlides">
+  <div class="numbertext">1 / 3</div>
+  <center><a href="https://tinyurl.com/SQOE1"><abbr title="click here to register" style="text-decoration: none;"><img src="queen.PNG" style="width:100%; height:348px;"></abbr></a></center>
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">2 / 3</div>
+  <center><a href="shortto.com/ClashOfVoice"><abbr title="click here to register" style="text-decoration: none;"><img src="clash.PNG" style="width:100%; height:348px;"></abbr></a></center>
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">3 / 3</div>
+  <center><a href="https://tinyurl.com/SQOE1"><abbr title="click here to register" style="text-decoration: none;"><img src="mind.PNG" style="width:100%; height:348px;"></abbr></a></center>
+  <!--<div class="text">Caption Three</div>-->
+</div>
+
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<br/>
+<div class="holder">
+	<div class="container1">
+	<center><div><img id="ceo" src="rohit.jpeg"></div></center>
+	<center><h3>Rohith</h3>
+	<p class="cont">Member of Otaku Organization</p>
+	<p class="cont">After joining Otaku Organization I got exposure to many things. I have learnt about new technologies.I got a chance to work with intellectual people. </p></center></div>
+	<div class="container1">
+	<center><div><img id="ceo" src="spandana.jpg"></div></center>
+	<center><h3>Ananth</h3>
+	<p class="cont">CEO of Otaku Organization</p>
+	<p class="cont">In our Otaku organization you will come across so many opportunities through which you only gain knowledge but at same time achieves an amazing experience.</p></center></div>
+	<div class="container1">
+	<center><div><img id="ceo" src="sumanth.jpeg"></div></center>
+	<center><h3>Sai Sumanth</h3>
+	<p class="cont">Member of Otaku Organization</p>
+	<p class="cont">After joining Otaku Organization I got exposure to many things. I have learnt about new technologies.I got a chance to work with intellectual people. </p></center></div>
+</div>
+<div class="footer">
+	<!--<h2 style="color: white;">Contact Us</h2>
+	<p><a id="fanc" href="mailto:sumanth1462@gmail.com">sumanth1462@gmail.com</a></p>
+  <center><table>
+  	
+
+    <caption><h2 style="color: white;">Follow Us</h2></caption>
+    <tr>
+      <td><a href="https://www.facebook.com/lattupallysaisumanthyuvi.reddy"><img src="fb.png" alt="Facebook" style="height:50px; width:50px;"></a></td>
+      <td><a href="https://twitter.com/ywc12sum"><img src="twit.png" alt="Twitter" style="height:50px; width:50px;"></a></td>
+     <td><a href="https://www.linkedin.com/in/sai-sumanth-lattupalli-a51358170/"><img src="lin.png" alt="Linkdin" style="height:40px; width:50px;"></a></td>
+     <td><a href="https://www.instagram.com/ywc12sum/?hl=en"><img src="insta.png" alt="Instagram" style="height:40px; width:40px;"></a></td>
+
+    </tr>
+  </table></center>-->
+  <center><table>
+  	<tr>
+  		<th colspan="2"><h2>Address</h2></th>
+  		<th>&nbsp;</th>
+  		<th>&nbsp;</th>
+
+  		<th colspan="2"><h2>Contact Us</h2></th>
+  		<th>&nbsp;</th>
+  		<th>&nbsp;</th>
+  		<th>&nbsp;</th>
+  		<th colspan="2"><h2>Follow Us</h2></th>
+  	</tr>
+  	<tr>
+  		<td colspan="2"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35384.33762787092!2d75.6965046743241!3d31.258613176964996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb80974d102f2870!2sBlock%2013%20Division%20Of%20Student%20Affairs!5e0!3m2!1sen!2sin!4v1604148030557!5m2!1sen!2sin" width="200" height="100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></td>
+  		<td>&nbsp;</td>
+  		<td>&nbsp;</td>
+  		<td colspan="2"><p><a id="fanc" href="mailto:otaku.organizationlpu@gmail.com ">otaku.organizationlpu@gmail.com </a></p></td>
+  		<td>&nbsp;</td>
+  		<td>&nbsp;</td>
+  		<td>&nbsp;</td>
+  		<td colspan="2"><span><a href="https://www.facebook.com/saibharathreddy.lattupally/"><img src="https://uploads-ssl.webflow.com/5e6188da5cfda193494c3865/5e856be3776a8138a8050644_008-facebook.svg" alt="Facebook" style="height:30px; width:30px;border-radius:100%;"></a></span>&nbsp;<span><a href="https://twitter.com/SaiBharath0778"><img src="https://uploads-ssl.webflow.com/5e6188da5cfda193494c3865/5e856c0ffa63bc08568186dd_002-twitter.svg" alt="Twitter" style="height:30px; width:30px;border-radius:100%;"></a></span>&nbsp;<span><a href="https://www.linkedin.com/in/sai-bharath-72a42b17b/"><img src="https://uploads-ssl.webflow.com/5e6188da5cfda193494c3865/5e856b34f0055beb8baaadb5_010-linkedin.svg" alt="Linkdin" style="height:30px; width:30px;border-radius:100%;"></a></span>&nbsp;<span><a href="https://www.instagram.com/squadron_organization_lpu/"><img src="https://uploads-ssl.webflow.com/5e6188da5cfda193494c3865/5e856c2228ae075a0240cbbd_011-instagram.svg" alt="Instagram" style="height:30px; width:30px;border-radius:100%;"></a></span></td></tr>
+  </table></center>
+</div>
+</div>
+</body>
+</html>

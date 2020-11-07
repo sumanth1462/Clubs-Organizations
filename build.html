@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+			margin: 0px;
+		}
+		#tab{
+			width:100%;
+		}
+		td{
+			padding-left: 5px;
+			padding-top: 5px;
+		}
+
+		.head{
+			background-color: green;
+			height:30px;
+		}
+	</style>
+	<script type="text/javascript">
+		function valid()
+		{
+			var org = document.getElementById("soname").value;
+			var cat = document.getElementById("svalue").value;
+			var pso = document.getElementById("poname").value;
+			var fina = document.getElementById("fnam").value;
+			var fac = document.getElementById("sofu").value;
+			var act = document.getElementById("asoc").value;
+			if(org==""||cat==""||pso==""||fina==""||fac==""||act=="")
+			{
+				alert("Fill all the Details");
+				return false;
+			}
+			else if(cat=="Select"){
+				alert("Select particular Category");
+				return false;
+			}
+			else if(isNaN(fac))
+			{
+				alert("Facilitator Uid must be a registration no of the facilitator");
+				return false;
+			}
+			else
+			{
+				alert("Details successfully submitted");
+				alert("Our Core community is reviewing the details and will intimate within 24hrs.")
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+	
+		<table id="tab" align="center" cellpadding="1">
+			<form onsubmit="return valid()" action="home.html">
+			<tr>
+				<td colspan="4" class="head" align="center"><b>Student Organization Registration Form</b></td>
+			</tr>
+			<tr>
+				<td><span>Name:</span></td>
+				<td><span>Lattupalli Sai Sumanth</span></td>
+				<td><span>Registration No:</span></td>
+				<td><span>11805500</span></td>
+			</tr>
+			<tr>
+				<td><span>Program:</span></td>
+				<td><span>B.Tech. (Computer Science & Engineering)</span></td>
+				<td><span>Passing Year :</span></td>
+				<td><span>2022</span></td>
+			</tr>
+			<tr>
+				<td><span>CGPA:</span></td>
+				<td><span>8.25</span></td>
+				<td><span>Email Id:</span></td>
+				<td><span>sumanth1462@gmail.com</span></td>
+			</tr>
+			<tr>
+				<td>Mobile:</td>
+				<td>9515536577</td>
+			</tr>
+			<tr>
+				<td><span>Student Organization Name:</span></td>
+				<td><span><input type="text" id="soname" name="oname" autocomplete="off"></span></td>
+				<td><span>Category:</span></td>
+				<td> <select style="width:150px;" id="svalue">
+			<option value="Select">Select</option>
+			<option value="Academic &amp; Technical">Academic &amp; Technical</option>
+			<option value="Hobbies &amp; Recreation">Hobbies &amp; Recreation</option>
+			<option value="Social Initiative">Social Initiative</option>
+			<option value="Literary, Media &amp; Publications">Literary, Media &amp; Publications</option>
+			<option value="Career Oriented">Career Oriented</option>
+			<option value="Foreign &amp; Research Education Initiation">Foreign &amp; Research Education Initiation</option>
+			<option value="Waste Management">Waste Management</option>
+			<option value="Environment, Forest &amp; Renewal Energy">Environment, Forest &amp; Renewal Energy</option>
+			<option value="Disaster Management">Disaster Management</option>
+			<option value="LPU Chapter of International &amp; National Student Organizations">LPU Chapter of International &amp; National Student Organizations</option>
+			<option value="Health and Sanitation">Health and Sanitation</option>
+			<option value="Entrepreneurship">Entrepreneurship</option>
+			<option value="Software/Website/App Development">Software/Website/App Development</option>
+			<option value="Artisan">Artisan</option>
+			<option value="Fitness through Natural Remedies">Fitness through Natural Remedies</option>
+			<option value="Ayurveda and Yoga">Ayurveda and Yoga</option>
+			<option value="Psychoneurobics">Psychoneurobics</option>
+			<option value="Agriculture">Agriculture</option>
+
+		</select></td>
+			</tr>
+			<tr>
+				<td><span>Purpose of Student Organization:</span></td>
+				<td><textarea id="poname" rows="3" cols="20"></textarea></td>
+				<td><span>Anticipated Student Organization activities:</span></td>
+				<td><span><input type="text" id="asoc" name="asoname" autocomplete="off"></span></td>
+			</tr>
+			<tr>
+				<td><span>Student Organization Facilitator Uid:</span></td>
+				<td><span><input type="text" id="sofu" name="sofu" autocomplete="off"></span></td>
+			</tr>
+			<tr>
+				<td><span><abbr title="Organization Board" style="text-decoration:none">OB</abbr>&nbsp;Member List:</span></td>
+				<td><span><input type="file" id="fnam" name="fname"></span></td>
+				<td><abbr title="Click Here to Download" style="text-decoration:none"><a href="storgform.xls" style="text-decoration: none;">Download Member List Format</a></abbr></td>
+			</tr>
+			<tr>
+				<td colspan="4" align="center">
+					<br/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" align="center">
+					<br/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" align="left"><span ><input id="CheckBox1" type="checkbox" name="CheckBox1" checked="checked" disabled="disabled" /><label for="CheckBox4">I agree to the terms And conditions policy of Student Organisation Cell.</label></span><abbr title="Click Here to Download" style="text-decoration:none"><a href="stuorganx.docx" style="text-decoration: none;">Vew Annexure</a></abbr></td>
+			</tr>
+			<tr>
+				<td colspan="4" align="center">
+					<br/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" align="center">
+					<br/>
+				</td>
+			</tr>
+			<tr><td colspan="4" align="center"><span><button type="submit">Submit</button></span></td></tr>
+			<tr>
+				<td><br/></td>
+			</tr>
+			</form>
+			<tr>
+				<td colspan="4" class="head"><span id="end"></span></td>
+			</tr>
+		</table>
+	
+	<div class="main"></div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+		#tab{
+			width:100%;
+		}
+		td{
+			padding-left: 5px;
+			padding-top: 5px;
+		}
+
+		.head{
+			background-color: green;
+			height:30px;
+			font-size: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+		function valid()
+		{
+			var org = document.getElementById("soname").value;
+			var event = document.getElementById("ename").value;
+			var des = document.getElementById("poname").value;
+			var cat = document.getElementById("svalue").value;
+			var daeve = document.getElementById("day").value;
+			var regist = document.getElementById("reg").value;
+			if(org==""||event==""||des==""||cat==""||daeve==""||regist=="")
+			{
+				alert("Fill all the Details");
+				return false;
+			}
+			else if(cat=="Select"){
+				alert("Select particular Category");
+				return false;
+			}
+			else
+			{
+				alert("Details Successfully Updated");
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+	
+		<table id="tab" align="center" cellpadding="1">
+			<form onsubmit="return valid()" action="home.html">
+			<tr>
+				<td colspan="4" class="head" align="center"><b>Event Registration Form</b></td>
+			</tr>
+			<tr>
+				<td><span>Student Organization Name:</span></td>
+				<td><span><input type="text" id="soname" name="oname" autocomplete="off"></span></td>
+				<td><span>Name Of the Event:</span></td>
+				<td><span><input type="text" id="ename" name="ename" autocomplete="off"></span></td>
+				
+			</tr>
+			<tr>
+				<td><span>Descrition about the Event:</span></td>
+				<td><textarea id="poname" rows="3" cols="20"></textarea></td>
+				<td><span>Category:</span></td>
+				<td> <select style="width:150px;" id="svalue">
+			<option value="Select">Select</option>
+			<option value="Technical Events">Technical Events</option>
+			<option value="Cultural Events">Cultural Events</option>
+			<option value="Sports Events">Sports Events</option>
+			<option value="Social Events">Social Events</option>
+		</select></td>
+			</tr>
+			<tr>
+				<td><span>Date Of the Event:</span></td>
+				<td><span><input type="Date" id="day" name="day" autocomplete="off"></span></td>
+				<td><span>Link For Registration:</span></td>
+				<td><span><input type="url" id="reg"  autocomplete="off" required="required"></span></td>
+			</tr>
+			<tr>
+				<td><br/></td>
+			</tr>
+			<tr><td colspan="4" align="center"><span><button type="submit">Submit</button></span></td></tr>
+			<tr>
+				<td><br/></td>
+			</tr>
+			</form>
+			<tr>
+				<td colspan="4" class="head"><span id="end"></span></td>
+			</tr>
+		</table>
+	
+</body>
+</html>
